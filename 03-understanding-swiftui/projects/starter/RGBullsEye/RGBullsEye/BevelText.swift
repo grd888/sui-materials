@@ -1,4 +1,4 @@
-/// Copyright (c) 2020 Razeware LLC
+/// Copyright (c) 2021 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -18,6 +18,10 @@
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
 /// 
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
+///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -28,54 +32,35 @@
 
 import SwiftUI
 
-struct MemoryView: View {
-  @Binding var memory: Double
-  var geometry: GeometryProxy
+struct BevelText: View {
+  let text: String
+  let width: CGFloat
+  let height: CGFloat
+  
+    var body: some View {
+        Text(text)
+          .frame(width: width, height: height)
+          .background(
+            ZStack {
+              Capsule()
+                .fill(Color.element)
+                .northWestShadow(radius: 3, offset: 1)
+              Capsule()
+                .inset(by: 3)
+                .fill(Color.element)
+                .southEastShadow(radius: 1, offset: 1)
+            }
+          )
+    }
+}
 
-  var body: some View {
-    #if targetEnvironment(macCatalyst)
-    let doubleTap = TapGesture(count: 2)
-      .onEnded { (_) in
-        self.memory = 0.0
+struct BevelText_Previews: PreviewProvider {
+    static var previews: some View {
+      Color.element
+      ZStack {
+        BevelText(text: "R: ??? G: ??? B: ???", width: 200, height: 48)
       }
-    #else
-    let memorySwipe = DragGesture(minimumDistance: 20)
-      .onEnded { (_) in
-        memory = 0.0
-      }
-    #endif
-    HStack {
-      Spacer()
-      #if targetEnvironment(macCatalyst)
-      Text("\(memory)")
-        .accessibility(identifier: "memoryDisplay")
-        .padding(.horizontal, 5)
-        .frame(
-          width: geometry.size.width * 0.85,
-          alignment: .trailing
-        )
-        .overlay(
-          RoundedRectangle(cornerRadius: 8)
-            .stroke(lineWidth: 2)
-            .foregroundColor(Color.gray)
-        )
-        .gesture(doubleTap)
-      #else
-      Text("\(memory)")
-        .accessibility(identifier: "memoryDisplay")
-        .padding(.horizontal, 5)
-        .frame(
-          width: geometry.size.width * 0.85,
-          alignment: .trailing
-        )
-        .overlay(
-          RoundedRectangle(cornerRadius: 8)
-            .stroke(lineWidth: 2)
-            .foregroundColor(Color.gray)
-        )
-        .gesture(memorySwipe)
-      #endif
-      Text("M")
-    }.padding(.bottom).padding(.horizontal, 5)
-  }
+      .frame(width: 300, height: 100)
+      .previewLayout(.sizeThatFits)
+    }
 }

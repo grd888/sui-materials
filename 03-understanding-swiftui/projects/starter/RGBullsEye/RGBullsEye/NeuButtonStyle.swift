@@ -1,4 +1,4 @@
-/// Copyright (c) 2020 Razeware LLC
+/// Copyright (c) 2021 Razeware LLC
 /// 
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
@@ -18,6 +18,10 @@
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
 /// 
+/// This project and source code may use libraries or frameworks that are
+/// released under various Open-Source licenses. Use of those libraries and
+/// frameworks are governed by their own individual licenses.
+///
 /// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 /// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 /// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -28,54 +32,26 @@
 
 import SwiftUI
 
-struct MemoryView: View {
-  @Binding var memory: Double
-  var geometry: GeometryProxy
-
-  var body: some View {
-    #if targetEnvironment(macCatalyst)
-    let doubleTap = TapGesture(count: 2)
-      .onEnded { (_) in
-        self.memory = 0.0
-      }
-    #else
-    let memorySwipe = DragGesture(minimumDistance: 20)
-      .onEnded { (_) in
-        memory = 0.0
-      }
-    #endif
-    HStack {
-      Spacer()
-      #if targetEnvironment(macCatalyst)
-      Text("\(memory)")
-        .accessibility(identifier: "memoryDisplay")
-        .padding(.horizontal, 5)
-        .frame(
-          width: geometry.size.width * 0.85,
-          alignment: .trailing
-        )
-        .overlay(
-          RoundedRectangle(cornerRadius: 8)
-            .stroke(lineWidth: 2)
-            .foregroundColor(Color.gray)
-        )
-        .gesture(doubleTap)
-      #else
-      Text("\(memory)")
-        .accessibility(identifier: "memoryDisplay")
-        .padding(.horizontal, 5)
-        .frame(
-          width: geometry.size.width * 0.85,
-          alignment: .trailing
-        )
-        .overlay(
-          RoundedRectangle(cornerRadius: 8)
-            .stroke(lineWidth: 2)
-            .foregroundColor(Color.gray)
-        )
-        .gesture(memorySwipe)
-      #endif
-      Text("M")
-    }.padding(.bottom).padding(.horizontal, 5)
+struct NeuButtonStyle: ButtonStyle {
+  let width: CGFloat
+  let height: CGFloat
+  
+  func makeBody(configuration: Configuration) -> some View {
+    configuration.label
+      .opacity(configuration.isPressed ? 0.2 : 1)
+      .frame(width: width, height: height)
+      .background(
+        Group {
+          if configuration.isPressed {
+            Capsule()
+              .fill(Color.element)
+          } else {
+            Capsule()
+              .fill(Color.element)
+              .northWestShadow()
+          }
+        }
+        
+      )
   }
 }
