@@ -20,6 +20,15 @@
 		9D7CA0312610A46300C6FFA5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA0302610A46300C6FFA5 /* WelcomeView.swift */; };
 		9D7CA0342610A47E00C6FFA5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA0302610A46300C6FFA5 /* WelcomeView.swift */; };
 		9D7CA0382611EE0200C6FFA5 /* HorizontallyAlignedLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA0372611EE0200C6FFA5 /* HorizontallyAlignedLabelStyle.swift */; };
+		9D7CA03F2611EFA700C6FFA5 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA03C2611EFA700C6FFA5 /* UserManager.swift */; };
+		9D7CA0402611EFA700C6FFA5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA03D2611EFA700C6FFA5 /* Profile.swift */; };
+		9D7CA0412611EFA700C6FFA5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA03E2611EFA700C6FFA5 /* Settings.swift */; };
+		9D7CA0442611EFB700C6FFA5 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA03C2611EFA700C6FFA5 /* UserManager.swift */; };
+		9D7CA0472611EFC000C6FFA5 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA03D2611EFA700C6FFA5 /* Profile.swift */; };
+		9D7CA04A2611EFC300C6FFA5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA03E2611EFA700C6FFA5 /* Settings.swift */; };
+		9D7CA04E2611EFED00C6FFA5 /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA04D2611EFED00C6FFA5 /* KeyboardFollower.swift */; };
+		9D7CA0522611F05F00C6FFA5 /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA0512611F05F00C6FFA5 /* WelcomeBackgroundImage.swift */; };
+		9D7CA0552611F07D00C6FFA5 /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA0512611F05F00C6FFA5 /* WelcomeBackgroundImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +44,11 @@
 		57EF341224E89F92004ABEB2 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		9D7CA0302610A46300C6FFA5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		9D7CA0372611EE0200C6FFA5 /* HorizontallyAlignedLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallyAlignedLabelStyle.swift; sourceTree = "<group>"; };
+		9D7CA03C2611EFA700C6FFA5 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		9D7CA03D2611EFA700C6FFA5 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		9D7CA03E2611EFA700C6FFA5 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		9D7CA04D2611EFED00C6FFA5 /* KeyboardFollower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardFollower.swift; path = "../../../../../../06-controls-and-user-input/projects/starter/Kuchi/iOS/Utils/KeyboardFollower.swift"; sourceTree = "<group>"; };
+		9D7CA0512611F05F00C6FFA5 /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +82,7 @@
 		57578F9224E9D943003465A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9D7CA0512611F05F00C6FFA5 /* WelcomeBackgroundImage.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -93,6 +108,7 @@
 		57B3CA712536560300888D62 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9D7CA04D2611EFED00C6FFA5 /* KeyboardFollower.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -112,6 +128,7 @@
 			children = (
 				57578FA724E9D943003465A4 /* HomeView.swift */,
 				57EF340024E89F91004ABEB2 /* KuchiApp.swift */,
+				9D7CA03B2611EFA700C6FFA5 /* Profile */,
 				57578FA924E9D943003465A4 /* Resources */,
 				57578F9024E9D943003465A4 /* Welcome */,
 			);
@@ -143,6 +160,17 @@
 				57EF341224E89F92004ABEB2 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		9D7CA03B2611EFA700C6FFA5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9D7CA03C2611EFA700C6FFA5 /* UserManager.swift */,
+				9D7CA03D2611EFA700C6FFA5 /* Profile.swift */,
+				9D7CA03E2611EFA700C6FFA5 /* Settings.swift */,
+			);
+			name = Profile;
+			path = "../../../../../06-controls-and-user-input/projects/starter/Kuchi/Shared/Profile";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,8 +275,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				57EF341324E89F92004ABEB2 /* KuchiApp.swift in Sources */,
+				9D7CA0402611EFA700C6FFA5 /* Profile.swift in Sources */,
 				9D7CA0312610A46300C6FFA5 /* WelcomeView.swift in Sources */,
 				9D7CA0382611EE0200C6FFA5 /* HorizontallyAlignedLabelStyle.swift in Sources */,
+				9D7CA04E2611EFED00C6FFA5 /* KeyboardFollower.swift in Sources */,
+				9D7CA0522611F05F00C6FFA5 /* WelcomeBackgroundImage.swift in Sources */,
+				9D7CA0412611EFA700C6FFA5 /* Settings.swift in Sources */,
+				9D7CA03F2611EFA700C6FFA5 /* UserManager.swift in Sources */,
 				57578FDE24E9D943003465A4 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,9 +290,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D7CA04A2611EFC300C6FFA5 /* Settings.swift in Sources */,
 				57EF341424E89F92004ABEB2 /* KuchiApp.swift in Sources */,
+				9D7CA0472611EFC000C6FFA5 /* Profile.swift in Sources */,
 				9D7CA0342610A47E00C6FFA5 /* WelcomeView.swift in Sources */,
+				9D7CA0442611EFB700C6FFA5 /* UserManager.swift in Sources */,
 				57578FDF24E9D943003465A4 /* HomeView.swift in Sources */,
+				9D7CA0552611F07D00C6FFA5 /* WelcomeBackgroundImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
