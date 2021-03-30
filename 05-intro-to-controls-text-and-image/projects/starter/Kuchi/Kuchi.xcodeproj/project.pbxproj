@@ -29,6 +29,11 @@
 		9D7CA04E2611EFED00C6FFA5 /* KeyboardFollower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA04D2611EFED00C6FFA5 /* KeyboardFollower.swift */; };
 		9D7CA0522611F05F00C6FFA5 /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA0512611F05F00C6FFA5 /* WelcomeBackgroundImage.swift */; };
 		9D7CA0552611F07D00C6FFA5 /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA0512611F05F00C6FFA5 /* WelcomeBackgroundImage.swift */; };
+		9D7CA0592611F17B00C6FFA5 /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA0582611F17B00C6FFA5 /* LogoImage.swift */; };
+		9D7CA05F2611F25A00C6FFA5 /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA05E2611F25A00C6FFA5 /* WelcomeMessageView.swift */; };
+		9D7CA0632612024600C6FFA5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA0622612024600C6FFA5 /* RegisterView.swift */; };
+		9D7CA06D2613517400C6FFA5 /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA06C2613517400C6FFA5 /* BorderedViewModifier.swift */; };
+		9D7CA06E2613517400C6FFA5 /* BorderedViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7CA06C2613517400C6FFA5 /* BorderedViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +54,10 @@
 		9D7CA03E2611EFA700C6FFA5 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		9D7CA04D2611EFED00C6FFA5 /* KeyboardFollower.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardFollower.swift; path = "../../../../../../06-controls-and-user-input/projects/starter/Kuchi/iOS/Utils/KeyboardFollower.swift"; sourceTree = "<group>"; };
 		9D7CA0512611F05F00C6FFA5 /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
+		9D7CA0582611F17B00C6FFA5 /* LogoImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
+		9D7CA05E2611F25A00C6FFA5 /* WelcomeMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
+		9D7CA0622612024600C6FFA5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		9D7CA06C2613517400C6FFA5 /* BorderedViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +83,7 @@
 			children = (
 				57578F9224E9D943003465A4 /* Components */,
 				9D7CA0302610A46300C6FFA5 /* WelcomeView.swift */,
+				9D7CA0622612024600C6FFA5 /* RegisterView.swift */,
 				9D7CA0372611EE0200C6FFA5 /* HorizontallyAlignedLabelStyle.swift */,
 			);
 			path = Welcome;
@@ -83,6 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				9D7CA0512611F05F00C6FFA5 /* WelcomeBackgroundImage.swift */,
+				9D7CA05E2611F25A00C6FFA5 /* WelcomeMessageView.swift */,
+				9D7CA0582611F17B00C6FFA5 /* LogoImage.swift */,
+				9D7CA06C2613517400C6FFA5 /* BorderedViewModifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -276,11 +289,15 @@
 			files = (
 				57EF341324E89F92004ABEB2 /* KuchiApp.swift in Sources */,
 				9D7CA0402611EFA700C6FFA5 /* Profile.swift in Sources */,
+				9D7CA0592611F17B00C6FFA5 /* LogoImage.swift in Sources */,
 				9D7CA0312610A46300C6FFA5 /* WelcomeView.swift in Sources */,
 				9D7CA0382611EE0200C6FFA5 /* HorizontallyAlignedLabelStyle.swift in Sources */,
+				9D7CA05F2611F25A00C6FFA5 /* WelcomeMessageView.swift in Sources */,
 				9D7CA04E2611EFED00C6FFA5 /* KeyboardFollower.swift in Sources */,
 				9D7CA0522611F05F00C6FFA5 /* WelcomeBackgroundImage.swift in Sources */,
 				9D7CA0412611EFA700C6FFA5 /* Settings.swift in Sources */,
+				9D7CA06D2613517400C6FFA5 /* BorderedViewModifier.swift in Sources */,
+				9D7CA0632612024600C6FFA5 /* RegisterView.swift in Sources */,
 				9D7CA03F2611EFA700C6FFA5 /* UserManager.swift in Sources */,
 				57578FDE24E9D943003465A4 /* HomeView.swift in Sources */,
 			);
@@ -296,6 +313,7 @@
 				9D7CA0342610A47E00C6FFA5 /* WelcomeView.swift in Sources */,
 				9D7CA0442611EFB700C6FFA5 /* UserManager.swift in Sources */,
 				57578FDF24E9D943003465A4 /* HomeView.swift in Sources */,
+				9D7CA06E2613517400C6FFA5 /* BorderedViewModifier.swift in Sources */,
 				9D7CA0552611F07D00C6FFA5 /* WelcomeBackgroundImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
